@@ -17,20 +17,20 @@ export default function EbookPromptsLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <span className="text-sm sm:text-base font-bold text-blue-600">E-book 66 Prompts</span>
+              <span className="text-sm sm:text-base font-bold text-marsala">E-book 66 Prompts</span>
             </div>
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-6">
-              <button onClick={() => scrollToSection('features')} className="text-sm text-gray-700 hover:text-blue-600 transition">O que Você Vai Receber</button>
-              <button onClick={() => scrollToSection('testimonials')} className="text-sm text-gray-700 hover:text-blue-600 transition">Exemplos de Imagens</button>
-              <button onClick={() => scrollToSection('why-choose')} className="text-sm text-gray-700 hover:text-blue-600 transition">Para Quem é</button>
-              <button onClick={() => scrollToSection('faq')} className="text-sm text-gray-700 hover:text-blue-600 transition">FAQ</button>
+              <button onClick={() => scrollToSection('features')} className="text-sm text-gray-700 hover:text-marsala transition">O que Você Vai Receber</button>
+              <button onClick={() => scrollToSection('testimonials')} className="text-sm text-gray-700 hover:text-marsala transition">Exemplos de Imagens</button>
+              <button onClick={() => scrollToSection('why-choose')} className="text-sm text-gray-700 hover:text-marsala transition">Para Quem é</button>
+              <button onClick={() => scrollToSection('faq')} className="text-sm text-gray-700 hover:text-marsala transition">FAQ</button>
             </div>
 
             <button
               onClick={() => scrollToSection('final-cta')}
-              className="hidden lg:block px-6 py-2.5 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition transform hover:scale-105"
+              className="hidden lg:block px-6 py-2.5 bg-marsala text-white rounded-lg font-semibold hover:bg-marsala transition transform hover:scale-105"
             >
               Comprar Agora
             </button>
@@ -53,24 +53,24 @@ export default function EbookPromptsLanding() {
               <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left py-2 text-gray-700">Exemplossss</button>
               <button onClick={() => scrollToSection('why-choose')} className="block w-full text-left py-2 text-gray-700">Para Quem é</button>
               <button onClick={() => scrollToSection('faq')} className="block w-full text-left py-2 text-gray-700">FAQ</button>
-              <button onClick={() => scrollToSection('final-cta')} className="w-full mt-2 px-4 py-2.5 bg-blue-600 text-white rounded-lg font-semibold">Comprar Agora</button>
+              <button onClick={() => scrollToSection('final-cta')} className="w-full mt-2 px-4 py-2.5 bg-marsala text-white rounded-lg font-semibold">Comprar Agora</button>
             </div>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <section className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-marsala/10 via-white to-marsala/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-marsala/20 text-marsala rounded-full text-sm font-medium">
                 <Check size={16} />
                 Mais de 3.000 imagens criadas com estes prompts
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
-                Crie Fotos Estilo Book Profissional <span className="text-blue-600">Usando Apenas IA</span>
+                Crie Fotos Estilo Book Profissional <span className="text-marsala">Usando Apenas IA</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
@@ -80,13 +80,13 @@ export default function EbookPromptsLanding() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => scrollToSection('final-cta')}
-                  className="px-8 py-4 bg-blue-600 text-white rounded-lg font-bold text-lg hover:bg-blue-700 transition transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="px-8 py-4 bg-marsala text-white rounded-lg font-bold text-lg hover:bg-marsala transition transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Baixar Agora
                 </button>
                 <button
                   onClick={() => scrollToSection('testimonials')}
-                  className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-bold text-lg hover:bg-blue-50 transition"
+                  className="px-8 py-4 bg-white text-marsala border-2 border-marsala rounded-lg font-bold text-lg hover:bg-marsala/10 transition"
                 >
                   Ver Exemplos de Imagens
                 </button>
@@ -122,15 +122,15 @@ export default function EbookPromptsLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
             <div className="flex items-center gap-2 text-gray-700">
-              <Check className="text-blue-600" size={24} />
+              <Check className="text-marsala" size={24} />
               <span className="font-semibold">Resultado Imediato</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
-              <Check className="text-blue-600" size={24} />
+              <Check className="text-marsala" size={24} />
               <span className="font-semibold">Aprovado por Criadores</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
-              <Check className="text-blue-600" size={24} />
+              <Check className="text-marsala" size={24} />
               <span className="font-semibold">Testado em Gemini e Outras IAs</span>
             </div>
           </div>
@@ -147,9 +147,9 @@ export default function EbookPromptsLanding() {
           </div>
 
           {/* Main Feature Card */}
-          <div className="mb-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 sm:p-12 text-white shadow-xl transform hover:scale-[1.02] transition">
+          <div className="mb-8 bg-gradient-to-br from-marsala to-marsala rounded-2xl p-8 sm:p-12 text-white shadow-xl transform hover:scale-[1.02] transition">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4">66 Prompts Profissionais</h3>
-            <p className="text-lg text-blue-100">Criados e testados para gerar fotos realistas estilo book.</p>
+            <p className="text-lg text-marsala/20">Criados e testados para gerar fotos realistas estilo book.</p>
           </div>
 
           {/* Feature Grid */}
@@ -188,8 +188,8 @@ export default function EbookPromptsLanding() {
                 key={idx}
                 className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition hover:border-blue-300 group"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition">
-                  <Check className="text-blue-600 group-hover:text-white transition" size={24} />
+                <div className="w-12 h-12 bg-marsala/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-marsala transition">
+                  <Check className="text-marsala group-hover:text-white transition" size={24} />
                 </div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h4>
                 <p className="text-gray-600">{feature.desc}</p>
@@ -236,7 +236,7 @@ export default function EbookPromptsLanding() {
               }
             ].map((pillar, idx) => (
               <div key={idx} className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <div className="w-16 h-16 bg-marsala rounded-full flex items-center justify-center mb-6 mx-auto">
                   <span className="text-2xl font-bold text-white">{idx + 1}</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">{pillar.title}</h3>
@@ -285,7 +285,7 @@ export default function EbookPromptsLanding() {
             ].map((testimonial, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-marsala rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.avatar}
                   </div>
                   <div className="flex-1">
@@ -341,7 +341,7 @@ export default function EbookPromptsLanding() {
                   <span className="font-semibold text-gray-900 pr-4">{faq.q}</span>
                   <ChevronDown
                     size={20}
-                    className={`text-blue-600 flex-shrink-0 transition-transform ${
+                    className={`text-marsala flex-shrink-0 transition-transform ${
                       openFaq === idx ? 'rotate-180' : ''
                     }`}
                   />
@@ -358,22 +358,22 @@ export default function EbookPromptsLanding() {
       </section>
 
       {/* Final CTA */}
-      <section id="final-cta" className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-700">
+      <section id="final-cta" className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-marsala to-marsala">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-8">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
                 Comece a Criar Suas Fotos Profissionais Hoje
               </h2>
-              <p className="text-lg sm:text-xl text-blue-100">
+              <p className="text-lg sm:text-xl text-marsala/20">
                 Acesso imediato aos 66 prompts testados. Transforme suas fotos em segundos.
               </p>
               
               <div className="space-y-4">
-                <button className="w-full sm:w-auto px-10 py-5 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-xl">
+                <button className="w-full sm:w-auto px-10 py-5 bg-white text-marsala rounded-lg font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-xl">
                   Garantir Meu E-book Agora
                 </button>
-                <p className="text-sm text-blue-100">
+                <p className="text-sm text-marsala/20">
                   ✓ Acesso vitalício ✓ Atualizações grátis ✓ Garantia de 7 dias
                 </p>
               </div>
