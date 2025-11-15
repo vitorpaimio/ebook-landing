@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { ChevronDown, Star, Check, Menu, X, Sparkles, Zap, Award, Layers, Image, Settings, BookOpen } from 'lucide-react';
+import { ChevronDown, Star, Check, Menu, X, Sparkles, Zap, Award, Layers, Image, Settings, BookOpen, CheckCircle, BookOpenText, BadgeCheck, KeyRound, Rocket } from 'lucide-react';
 
 export default function EbookPromptsLanding() {
   const [openFaq, setOpenFaq] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const purchaseLink = 'https://pay.kiwify.com.br/G1YLd1e';
 
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -22,18 +23,20 @@ export default function EbookPromptsLanding() {
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-6">
-              <button onClick={() => scrollToSection('features')} className="text-sm text-gray-700 hover:text-[#964F4C] transition">O que Você Vai Receber</button>
-              <button onClick={() => scrollToSection('testimonials')} className="text-sm text-gray-700 hover:text-[#964F4C] transition">Exemplos de Imagens</button>
-              <button onClick={() => scrollToSection('why-choose')} className="text-sm text-gray-700 hover:text-[#964F4C] transition">Para Quem é</button>
-              <button onClick={() => scrollToSection('faq')} className="text-sm text-gray-700 hover:text-[#964F4C] transition">FAQ</button>
+              <button onClick={() => scrollToSection('features')} className="text-sm uppercase text-gray-700 hover:text-[#964F4C] transition">O que Você Vai Receber</button>
+              <button onClick={() => scrollToSection('testimonials')} className="text-sm uppercase text-gray-700 hover:text-[#964F4C] transition">Depoimentos</button>
+              <button onClick={() => scrollToSection('why-choose')} className="text-sm uppercase text-gray-700 hover:text-[#964F4C] transition">Para Quem é</button>
+              <button onClick={() => scrollToSection('faq')} className="text-sm uppercase text-gray-700 hover:text-[#964F4C] transition">FAQ</button>
             </div>
 
-            <button
-              onClick={() => scrollToSection('final-cta')}
+            <a
+              href={purchaseLink}
+              target="_blank"
+              rel="noreferrer"
               className="hidden lg:block px-6 py-2.5 bg-[#964F4C] text-white rounded-lg font-semibold hover:bg-[#964F4C] transition transform hover:scale-105"
             >
               Comprar Agora
-            </button>
+            </a>
 
             {/* Mobile Menu Button */}
             <button
@@ -49,11 +52,19 @@ export default function EbookPromptsLanding() {
         {mobileMenuOpen && (
           <div className="lg:hidden bg-white border-t">
             <div className="px-4 pt-2 pb-4 space-y-2">
-              <button onClick={() => scrollToSection('features')} className="block w-full text-left py-2 text-gray-700">O que Você Vai Receber</button>
-              <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left py-2 text-gray-700">Exemplossss</button>
-              <button onClick={() => scrollToSection('why-choose')} className="block w-full text-left py-2 text-gray-700">Para Quem é</button>
-              <button onClick={() => scrollToSection('faq')} className="block w-full text-left py-2 text-gray-700">FAQ</button>
-              <button onClick={() => scrollToSection('final-cta')} className="w-full mt-2 px-4 py-2.5 bg-[#964F4C] text-white rounded-lg font-semibold">Comprar Agora</button>
+              <button onClick={() => scrollToSection('features')} className="block w-full text-left py-2 uppercase text-gray-700">O que Você Vai Receber</button>
+              <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left py-2 uppercase text-gray-700">Depoimentos</button>
+              <button onClick={() => scrollToSection('why-choose')} className="block w-full text-left py-2 uppercase text-gray-700">Para Quem é</button>
+              <button onClick={() => scrollToSection('faq')} className="block w-full text-left py-2 uppercase text-gray-700">FAQ</button>
+              <a
+                href={purchaseLink}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full mt-2 px-4 py-2.5 bg-[#964F4C] text-white rounded-lg font-semibold block text-center"
+              >
+                COMPRAR AGORA
+              </a>
             </div>
           </div>
         )}
@@ -74,26 +85,28 @@ export default function EbookPromptsLanding() {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                75 Prompts prontos, testados e validados. Copie, cole e gere imagens incríveis mesmo sem conhecimento técnico.
+                Copie, cole e gere imagens incríveis mesmo sem conhecimento técnico.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => scrollToSection('final-cta')}
+                <a
+                  href={purchaseLink}
+                  target="_blank"
+                  rel="noreferrer"
                   className="px-8 py-4 bg-[#964F4C] text-white rounded-lg font-bold text-lg hover:bg-[#964F4C] transition transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Comprar Agora
-                </button>
+                  COMPRAR AGORA
+                </a>
                 <button
                   onClick={() => scrollToSection('testimonials')}
                   className="px-8 py-4 bg-white text-[#964F4C] border-2 border-[#964F4C] rounded-lg font-bold text-lg hover:bg-[#964F4C]/10 transition"
                 >
-                  Ver Exemplos de Imagens
+                  Ver Depoimentos
                 </button>
               </div>
 
               <div className="flex items-center gap-2 pt-4">
-                <div className="flex -space-x-2">
+                <div className="flex space-x-1">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <Star key={i} size={20} className="fill-yellow-400 text-yellow-400" />
                   ))}
@@ -104,12 +117,12 @@ export default function EbookPromptsLanding() {
               </div>
             </div>
 
-            <div className="relative animate-slide-in">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative animate-slide-in flex justify-center">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white w-full max-w-[320px] lg:max-w-[380px]">
                 <img
-                  src="data:image/svg+xml,%3Csvg width='600' height='800' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='600' height='800' fill='%232563eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='24' fill='white'%3EE-book Cover%3C/text%3E%3C/svg%3E"
-                  alt="E-book Preview"
-                  className="w-full"
+                  src="/cover-headline.svg"
+                  alt="Cover do E-book"
+                  className="w-full h-auto"
                 />
               </div>
             </div>
@@ -207,32 +220,38 @@ export default function EbookPromptsLanding() {
             {[
               {
                 title: "Prompts Testados e Validados",
-                desc: "Cada prompt foi usado para gerar imagens reais que já impressionaram centenas de pessoas."
+                desc: "Cada prompt foi usado para gerar imagens reais que já impressionaram centenas de pessoas.",
+                Icon: CheckCircle
               },
               {
                 title: "Explicações Simples e Diretas",
-                desc: "Ideal para quem nunca usou IA para gerar fotos."
+                desc: "Ideal para quem nunca usou IA para gerar fotos.",
+                Icon: BookOpenText
               },
               {
                 title: "Alta Qualidade Garantida",
-                desc: "Linguagem otimizada para resultados profissionais estilo editorial."
+                desc: "Linguagem otimizada para resultados profissionais estilo editorial.",
+                Icon: BadgeCheck
               },
               {
                 title: "Conteúdo Exclusivo",
-                desc: "Estruturas de prompt que você não encontra gratuitamente por aí."
+                desc: "Estruturas de prompt que você não encontra gratuitamente por aí.",
+                Icon: KeyRound
               },
               {
                 title: "Versatilidade Máxima",
-                desc: "Crie desde books femininos e masculinos até fotos infantis, natalinas e temáticas."
+                desc: "Crie desde books femininos e masculinos até fotos infantis, natalinas e temáticas.",
+                Icon: Layers
               },
               {
                 title: "Transformação Imediata",
-                desc: "Você copia e cola, e em segundos está vendo imagens prontas."
+                desc: "Você copia e cola, e em segundos está vendo imagens prontas.",
+                Icon: Rocket
               }
             ].map((pillar, idx) => (
               <div key={idx} className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition">
                 <div className="w-16 h-16 bg-[#964F4C] rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <span className="text-2xl font-bold text-white">{idx + 1}</span>
+                  <pillar.Icon size={32} className="text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">{pillar.title}</h3>
                 <p className="text-gray-600 text-center">{pillar.desc}</p>
@@ -251,37 +270,36 @@ export default function EbookPromptsLanding() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
+          <div className="max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+              {[
               {
                 name: "Nathalia Kegler",
                 location: "Brasil",
                 text: "Tô adorandooo! Muito fácil de fazer da forma como você ensina.",
-                avatar: "NK"
+                photo: "/nathalia.webp"
               },
               {
                 name: "Helena Fotografias",
                 location: "Empreendedora Digital",
                 text: "É perfeita! Os melhores prompts estão aqui.",
-                avatar: "HF"
-              },
-              {
-                name: "Josia R. Mentora",
-                location: "Brasil",
-                text: "Experiência maravilhosa!",
-                avatar: "JR"
+                photo: "/helena.webp"
               },
               {
                 name: "Clarissa Telles",
                 location: "Brasil",
                 text: "Muito bom! Consigo fazer vários cenários e as fotos ficam super naturais.",
-                avatar: "CT"
+                photo: "/clarissa.webp"
               }
             ].map((testimonial, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-[#964F4C] rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.avatar}
+                  <div className="w-12 h-12 rounded-full overflow-hidden border border-[#964F4C]">
+                    <img
+                      src={testimonial.photo}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="flex-1">
                     <div className="flex gap-1 mb-1">
@@ -296,6 +314,7 @@ export default function EbookPromptsLanding() {
                 <p className="text-gray-700 text-sm leading-relaxed">{testimonial.text}</p>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </section>
@@ -361,13 +380,18 @@ export default function EbookPromptsLanding() {
           Comece a Criar Suas Fotos Profissionais Hoje
         </h2>
         <p className="text-lg sm:text-xl text-white/80">
-          Acesso imediato aos 75 Prompts testados. Transforme suas fotos em segundos.
+          Transforme suas fotos em segundos.
         </p>
         
         <div className="space-y-4">
-          <button className="w-full sm:w-auto px-10 py-5 bg-white text-[#964F4C] rounded-lg font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-xl">
-            Garantir Meu E-book Agora
-          </button>
+          <a
+            href={purchaseLink}
+            target="_blank"
+            rel="noreferrer"
+            className="w-full sm:w-auto px-10 py-5 bg-white text-[#964F4C] rounded-lg font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-xl inline-block text-center"
+          >
+            GARANTIR MEU E-BOOK AGORA
+          </a>
           <p className="text-sm text-white/70">
             ✓ Acesso vitalício ✓ Atualizações grátis ✓ Garantia de 7 dias
           </p>
@@ -388,10 +412,17 @@ export default function EbookPromptsLanding() {
 <footer className="bg-white text-gray-900 py-12 px-4 border-t border-gray-200">
   <div className="max-w-7xl mx-auto text-center">
     <p className="text-gray-600">
-      E-book 75 Prompts para Criar Books Incríveis com IA © 2025
+      E-book 75 Prompts para Criar Books Incríveis com IA © 2025 · Site criado por @vitorpaimio
     </p>
     <div className="mt-4">
-      <a href="#" className="text-[#964F4C] hover:text-[#7a3f3d] transition">Instagram</a>
+      <a
+        href="https://www.instagram.com/daniellemarchesan"
+        target="_blank"
+        rel="noreferrer"
+        className="text-[#964F4C] hover:text-[#7a3f3d] transition"
+      >
+        Instagram
+      </a>
     </div>
   </div>
 </footer>
