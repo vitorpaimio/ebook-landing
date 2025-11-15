@@ -399,8 +399,12 @@ export default function EbookPromptsLanding() {
       </div>
 
       <div className="flex justify-center">
-        <div className="w-64 h-80 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-          <span className="text-white text-lg">App Mockup</span>
+        <div className="w-72 h-96 sm:w-80 sm:h-[420px] bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
+          <img
+            src="/cover-footer.svg"
+            alt="E-book cover"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </div>
