@@ -12,7 +12,7 @@ export default function EbookPromptsLanding() {
     title: '@daniellemarchesan - E-book 75 Prompts para Criar Books Incríveis com IA',
     description:
       'Descubra como criar fotos estilo book profissional usando apenas IA. Copie, cole e gere imagens incríveis mesmo sem conhecimento técnico.',
-    image: '/cover-headline.svg'
+    image: '/cover-headline.webp'
   };
 
   const scrollToSection = (id) => {
@@ -141,7 +141,7 @@ export default function EbookPromptsLanding() {
             <div className="relative animate-slide-in flex justify-center">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white w-full max-w-[320px] lg:max-w-[380px]">
                 <NextImage
-                  src="/cover-headline.svg"
+                  src="/cover-headline.webp"
                   alt="Cover do E-book"
                   width={380}
                   height={520}
@@ -428,7 +428,7 @@ export default function EbookPromptsLanding() {
         <div className="flex justify-center">
           <div className="w-72 h-96 sm:w-80 sm:h-[420px] bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
             <NextImage
-              src="/cover-footer.svg"
+              src="/cover-footer.webp"
               alt="E-book cover"
               width={320}
               height={420}
