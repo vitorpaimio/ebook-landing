@@ -441,13 +441,12 @@ export default function EbookPromptsLanding() {
   </div>
 </section>
 
-      {/* Footer */}
 {/* Footer */}
-<footer className="bg-white text-gray-900 py-12 px-4 border-t border-gray-200">
-  <div className="max-w-7xl mx-auto text-center">
-    <p className="text-gray-600">
-      E-book 75 Prompts para Criar Books Incríveis com IA © 2025 · Site criado por @vitorpaimio
-    </p>
+      <footer className="bg-white text-gray-900 py-12 px-4 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-gray-600">
+            E-book 75 Prompts para Criar Books Incríveis com IA © 2025 · Site criado por @vitorpaimio
+          </p>
     <div className="mt-4">
       <a
         href="https://www.instagram.com/daniellemarchesan"
@@ -457,9 +456,11 @@ export default function EbookPromptsLanding() {
       >
         Instagram
       </a>
-    </div>
-  </div>
-</footer>
+          </div>
+        </div>
+      </footer>
+
+      <SpeedInsights />
 
       <style jsx>{`
         @keyframes fade-in {
