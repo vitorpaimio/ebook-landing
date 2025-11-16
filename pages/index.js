@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import NextImage from 'next/image';
 import { ChevronDown, Star, Check, Menu, X, Sparkles, Zap, Award, Layers, LucideImage, Settings, BookOpen, CheckCircle, BookOpenText, BadgeCheck, KeyRound, Rocket } from 'lucide-react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function EbookPromptsLanding() {
   const [openFaq, setOpenFaq] = useState(null);
