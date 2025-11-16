@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import { ChevronDown, Star, Check, Menu, X, Sparkles, Zap, Award, Layers, Image, Settings, BookOpen, CheckCircle, BookOpenText, BadgeCheck, KeyRound, Rocket } from 'lucide-react';
 
 export default function EbookPromptsLanding() {
   const [openFaq, setOpenFaq] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const purchaseLink = 'https://pay.kiwify.com.br/G1YLd1e';
+  const seo = {
+    title: '@daniellemarchesan - E-book 75 Prompts para Criar Books Incríveis com IA',
+    description:
+      'Descubra como criar fotos estilo book profissional usando apenas IA. Copie, cole e gere imagens incríveis mesmo sem conhecimento técnico.',
+    image: '/cover-headline.svg'
+  };
 
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -12,7 +19,19 @@ export default function EbookPromptsLanding() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <>
+      <Head>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:image" content={seo.image} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+      </Head>
+      <div className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,7 +112,7 @@ export default function EbookPromptsLanding() {
                   href={purchaseLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-8 py-4 bg-[#964F4C] text-white rounded-lg font-bold text-lg hover:bg-[#964F4C] transition transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="w-full sm:w-auto text-center px-8 py-4 bg-[#964F4C] text-white rounded-lg font-bold text-lg hover:bg-[#964F4C] transition transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   COMPRAR AGORA
                 </a>
@@ -463,5 +482,6 @@ export default function EbookPromptsLanding() {
         }
       `}</style>
     </div>
+    </>
   );
 }
