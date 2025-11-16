@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { ChevronDown, Star, Check, Menu, X, Sparkles, Zap, Award, Layers, Image, Settings, BookOpen, CheckCircle, BookOpenText, BadgeCheck, KeyRound, Rocket } from 'lucide-react';
+import NextImage from 'next/image';
+import { ChevronDown, Star, Check, Menu, X, Sparkles, Zap, Award, Layers, LucideImage, Settings, BookOpen, CheckCircle, BookOpenText, BadgeCheck, KeyRound, Rocket } from 'lucide-react';
 
 export default function EbookPromptsLanding() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -131,16 +132,20 @@ export default function EbookPromptsLanding() {
                   ))}
                 </div>
                 <p className="text-sm text-gray-600 ml-2">
-                  <span className="font-bold">97%</span> dos compradores avaliam como "o melhor e-book de prompts que já usaram"
+                  <span className="font-bold">97%</span> dos compradores avaliam como &ldquo;o melhor e-book de prompts que já usaram&rdquo;
                 </p>
               </div>
             </div>
 
             <div className="relative animate-slide-in flex justify-center">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white w-full max-w-[320px] lg:max-w-[380px]">
-                <img
+                <NextImage
                   src="/cover-headline.svg"
                   alt="Cover do E-book"
+                  width={380}
+                  height={520}
+                  sizes="(max-width: 1024px) 320px, 380px"
+                  priority
                   className="w-full h-auto"
                 />
               </div>
@@ -198,7 +203,7 @@ export default function EbookPromptsLanding() {
               {
                 title: "Resultados Ultra-Realistas",
                 desc: "Linguagem projetada para gerar imagens 8K de altíssima qualidade.",
-                Icon: Image
+                Icon: LucideImage
               },
               {
                 title: "Compatível com Gemini, Midjourney e Outros Geradores",
@@ -313,11 +318,13 @@ export default function EbookPromptsLanding() {
             ].map((testimonial, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-[#964F4C]">
-                    <img
+                  <div className="w-12 h-12 rounded-full overflow-hidden border border-[#964F4C] relative">
+                    <NextImage
                       src={testimonial.photo}
                       alt={testimonial.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="48px"
+                      className="object-cover"
                     />
                   </div>
                   <div className="flex-1">
@@ -417,15 +424,18 @@ export default function EbookPromptsLanding() {
         </div>
       </div>
 
-      <div className="flex justify-center">
-        <div className="w-72 h-96 sm:w-80 sm:h-[420px] bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
-          <img
-            src="/cover-footer.svg"
-            alt="E-book cover"
-            className="w-full h-full object-cover"
-          />
+        <div className="flex justify-center">
+          <div className="w-72 h-96 sm:w-80 sm:h-[420px] bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
+            <NextImage
+              src="/cover-footer.svg"
+              alt="E-book cover"
+              width={320}
+              height={420}
+              sizes="(max-width: 640px) 280px, 320px"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
-      </div>
     </div>
   </div>
 </section>
