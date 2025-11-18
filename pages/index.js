@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Script from 'next/script';
 import NextImage from 'next/image';
 import { ChevronDown, Star, Check, Menu, X, Sparkles, Zap, Award, Layers, LucideImage, Settings, BookOpen, CheckCircle, BookOpenText, BadgeCheck, KeyRound, Rocket } from 'lucide-react';
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function EbookPromptsLanding() {
   const [openFaq, setOpenFaq] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const purchaseLink = 'https://pay.kiwify.com.br/G1YLd1e';
   const seo = {
     title: '@daniellemarchesan - E-book 75 Prompts para Criar Books Incríveis com IA',
     description:
@@ -33,6 +32,32 @@ export default function EbookPromptsLanding() {
         <link rel="icon" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
       </Head>
+      <Script
+        id="meta-pixel"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `!function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2040564976692013');
+            fbq('track', 'PageView');`
+        }}
+      />
+      <noscript>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          height="1"
+          width="1"
+          style={{ display: 'none' }}
+          src="https://www.facebook.com/tr?id=2040564976692013&ev=PageView&noscript=1"
+          alt=""
+        />
+      </noscript>
       <div className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
@@ -49,15 +74,6 @@ export default function EbookPromptsLanding() {
               <button onClick={() => scrollToSection('why-choose')} className="text-sm uppercase text-gray-700 hover:text-[#964F4C] transition">Para Quem é</button>
               <button onClick={() => scrollToSection('faq')} className="text-sm uppercase text-gray-700 hover:text-[#964F4C] transition">FAQ</button>
             </div>
-
-            <a
-              href={purchaseLink}
-              target="_blank"
-              rel="noreferrer"
-              className="hidden lg:block px-6 py-2.5 bg-[#964F4C] text-white rounded-lg font-semibold hover:bg-[#964F4C] transition transform hover:scale-105"
-            >
-              Comprar Agora
-            </a>
 
             {/* Mobile Menu Button */}
             <button
@@ -78,9 +94,7 @@ export default function EbookPromptsLanding() {
               <button onClick={() => scrollToSection('why-choose')} className="block w-full text-left py-2 uppercase text-gray-700">Para Quem é</button>
               <button onClick={() => scrollToSection('faq')} className="block w-full text-left py-2 uppercase text-gray-700">FAQ</button>
               <a
-                href={purchaseLink}
-                target="_blank"
-                rel="noreferrer"
+                href="https://pay.kiwify.com.br/G1YLd1e"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full mt-2 px-4 py-2.5 bg-[#964F4C] text-white rounded-lg font-semibold block text-center"
               >
@@ -111,9 +125,7 @@ export default function EbookPromptsLanding() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href={purchaseLink}
-                  target="_blank"
-                  rel="noreferrer"
+                  href="https://pay.kiwify.com.br/G1YLd1e"
                   className="w-full sm:w-auto text-center px-8 py-4 bg-[#964F4C] text-white rounded-lg font-bold text-lg hover:bg-[#964F4C] transition transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   COMPRAR AGORA
@@ -410,15 +422,13 @@ export default function EbookPromptsLanding() {
           Transforme suas fotos em segundos.
         </p>
         
-        <div className="space-y-4">
-          <a
-            href={purchaseLink}
-            target="_blank"
-            rel="noreferrer"
-            className="w-full sm:w-auto px-10 py-5 bg-white text-[#964F4C] rounded-lg font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-xl inline-block text-center"
-          >
-            GARANTIR MEU E-BOOK AGORA
-          </a>
+          <div className="space-y-4">
+            <a
+              href="https://pay.kiwify.com.br/G1YLd1e"
+              className="w-full sm:w-auto px-10 py-5 bg-white text-[#964F4C] rounded-lg font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-xl inline-block text-center"
+            >
+              GARANTIR MEU E-BOOK AGORA
+            </a>
           <p className="text-sm text-white/70">
             ✓ Acesso vitalício ✓ Atualizações grátis ✓ Garantia de 7 dias
           </p>
@@ -442,11 +452,11 @@ export default function EbookPromptsLanding() {
 </section>
 
 {/* Footer */}
-      <footer className="bg-white text-gray-900 py-12 px-4 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-600">
-            E-book 75 Prompts para Criar Books Incríveis com IA © 2025 · Site criado por @vitorpaimio
-          </p>
+<footer className="bg-white text-gray-900 py-12 px-4 border-t border-gray-200">
+  <div className="max-w-7xl mx-auto text-center">
+    <p className="text-gray-600">
+      E-book 75 Prompts para Criar Books Incríveis com IA © 2025 · Site criado por @vitorpaimio
+    </p>
     <div className="mt-4">
       <a
         href="https://www.instagram.com/daniellemarchesan"
@@ -456,11 +466,9 @@ export default function EbookPromptsLanding() {
       >
         Instagram
       </a>
-          </div>
-        </div>
-      </footer>
-
-      <SpeedInsights />
+    </div>
+  </div>
+</footer>
 
       <style jsx>{`
         @keyframes fade-in {
